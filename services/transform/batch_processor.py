@@ -36,7 +36,5 @@ class BatchProcessor:
 
             # Perform the transformation
             transformed_df = transformer.transform()
-            # print(transformed_df)
-            # self.io_handler.read(self.input_path, batch_size=self.batch_size)
 
             self.io_handler.write(self.output_path, transformed_df)

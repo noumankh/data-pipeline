@@ -49,15 +49,9 @@ class ParquetIO(IOHandler):
         Returns:
             None
         """
-        # self.validate_destination(destination)
-        # Convert the DataFrame to a PyArrow Table
         if file_name is None:
             file_name = uuid.uuid4()
         data.to_parquet(destination + f"{file_name}.parquet")
-        # return unique_file_name
-        # table = pa.Table.from_pandas(data)
-        # Write the PyArrow Table to a Parquet file
-        # pq.write_table(table, destination, *args, **kwargs)
 
 
     def clear(self, destination: str, *args, **kwargs):
